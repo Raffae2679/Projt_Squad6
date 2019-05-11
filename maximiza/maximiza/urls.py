@@ -20,6 +20,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$', 'maximiza.maxmi.views.home', name='home'),
+	url(r'^', include('maximiza.maxmi.urls',namespace='maxmi')),
     url(r'^admin/', include(admin.site.urls)),
 )
